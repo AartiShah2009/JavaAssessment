@@ -3,13 +3,10 @@ import java.util.Scanner;
 public class Student {
 	private int roll;
 	private String name;
-	public void setStudent()
+	public void setStudent(int roll,String name)
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Student Roll Number");
-		roll = sc.nextInt();
-		System.out.println("Enter Student Name");
-		name = sc.next();
+		this.roll = roll;
+		this.name = name;		
 		System.out.println("Student Data Saved Successfully");
 	}
 	public Student getDetailsById(int student_id) {
