@@ -25,14 +25,44 @@ public class LibraryMain {
 		{
 		case 1:
 			s[objectCountS ] = new Student();
-			s[objectCountS].setStudent();
+			System.out.println("Enter Student Roll Number");
+			int roll = sc.nextInt();
+			System.out.println("Enter Student Name");
+			String name1 = sc.next();
+			for(i=0;i<objectCountS;i++) {
+				if(roll == s[i].getRoll()) {
+					f=1;
+					break;
+				}
+			}
+			if(f==0) {
+			s[objectCountS].setStudent(roll,name1);
 			objectCountS++;
+				}
+				else
+					System.out.println("You Have Already Register:");
+			
 			break;
 			
 		case 2:	
 			b[objectCountB] = new Book();
-			b[objectCountB].setBook();
+			System.out.println("Enter Book Id");
+			int bookId = sc.nextInt();
+			System.out.println("Enter Book Name");
+			String bookName = sc.next();
+			for(i=0;i<objectCountB;i++) {
+				if(bookId == b[i].getBookId()) {
+					f=1;
+					break;
+				}
+			}
+			if(f==0) {
+			b[objectCountB].setBook(bookId,bookName);
 			objectCountB++;
+			}
+			else
+				System.out.println("You Have Already Register:");
+
 			break;
 			
 		case 3:
