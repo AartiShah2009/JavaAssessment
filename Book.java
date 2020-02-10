@@ -4,13 +4,10 @@ import java.util.Scanner;
 public class Book {
 	private int bookId;
 	private String bookName;
-	public void setBook()
+	public void setBook(int bookId,String bookName)
 	{
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter Book Id");
-		bookId = sc.nextInt();
-		System.out.println("Enter Book Name");
-		bookName = sc.next();
+		this.bookId=bookId;
+		this.bookName=bookName;
 		System.out.println("Book Details Saved Successfully");
 	}
 	public Book getDetailsById(int book_id) {
@@ -36,8 +33,8 @@ public class Book {
 	public void display()
 	{
 		
-		System.out.println("id=" + bookId);
-		System.out.println("name=" + bookName);
+		System.out.println("Book id=" + bookId);
+		System.out.println("Book name=" + bookName);
 	
 	}
 
